@@ -7,12 +7,7 @@ const person = {
 
 for (let key in person) console.log(key, person[key]);
 
-// // Dot Notation
-// person.name;
-// // Bracket Notation
-// person["name"];
-
-// Arrays οχι τοσο καλο για Arrays
+// for of καλυτερο για arrays
 const colors = ["red", "green", "blue"];
 
-for (let index in colors) console.log(index, colors[index]);
+for (let color of colors) console.log(color);
