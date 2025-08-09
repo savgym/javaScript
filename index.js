@@ -1,13 +1,16 @@
-// for-in loop για arrays
-
-const person = {
-  name: "Savvas",
-  age: 30,
-};
-
-for (let key in person) console.log(key, person[key]);
-
-// for of καλυτερο για arrays
-const colors = ["red", "green", "blue"];
-
-for (let color of colors) console.log(color);
+let i = 0;
+// break
+// while (i <= 10) {
+//   if (i === 5) break;
+//   console.log(i);
+//   i++;
+// }
+// continue
+while (i <= 10) {
+  if (i % 2 === 0) {
+    i++;
+    continue;
+  }
+  console.log(i);
+  i++;
+}
