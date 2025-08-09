@@ -1,18 +1,18 @@
-// for (let i = 1; i <= 5; i++) {
-//   if (i % 2 !== 0) console.log(i);
-// }
+// for-in loop για arrays
 
-// The same
+const person = {
+  name: "Savvas",
+  age: 30,
+};
 
-// let i = 0;
-// while (i <= 5) {
-//   if (i % 2 !== 0) console.log(i);
-//   i++;
-// }
+for (let key in person) console.log(key, person[key]);
 
-// do-while διαφορα εκτελειται τουλαχιστον μια φορα
-let i = 1;
-do {
-  if (i % 2 !== 0) console.log(i);
-  i++;
-} while (i <= 5);
+// // Dot Notation
+// person.name;
+// // Bracket Notation
+// person["name"];
+
+// Arrays οχι τοσο καλο για Arrays
+const colors = ["red", "green", "blue"];
+
+for (let index in colors) console.log(index, colors[index]);
