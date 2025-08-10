@@ -9,7 +9,13 @@ function createCircle(radius) {
 }
 
 const circle1 = createCircle(1);
-console.log(circle1);
 
-const circle2 = createCircle(2);
-console.log(circle2);
+// Constraction Function
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("drow");
+  };
+}
+
+const circle2 = new Circle(1);
