@@ -1,26 +1,19 @@
-// 0-59:F
-// 60-69:D
-// 70-79:C
-// 80-89:B
-// 90-100:A
+showStars(10);
 
-const marks = [0, 0, 50];
-// Average =70
+// function showStars(rows) {
+//   let array = [];
+//   let star = "*";
 
-console.log(calculateGrade(marks));
+//   for (let row = 0; row < rows; row++) array[row] = row + 1;
+//   for (let row = 0; row < array.length; row++)
+//     array[row] = star.repeat(row + 1);
+//   console.log(array);
+// }
 
-function calculateGrade(marks) {
-  const average = calculateAverage(marks);
-
-  if (average < 60) return "F";
-  if (average < 80) return "C";
-  if (average < 70) return "D";
-  if (average < 90) return "B";
-  return "A";
-}
-
-function calculateAverage(array) {
-  let sum = 0;
-  for (let value of array) sum += value;
-  return sum / array.length;
+function showStars(rows) {
+  for (let row = 1; row <= rows; row++) {
+    let pattern = "";
+    for (let i = 0; i < row; i++) pattern += "*";
+    console.log(pattern);
+  }
 }
