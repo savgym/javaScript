@@ -1,19 +1,12 @@
-showStars(10);
-
-// function showStars(rows) {
-//   let array = [];
-//   let star = "*";
-
-//   for (let row = 0; row < rows; row++) array[row] = row + 1;
-//   for (let row = 0; row < array.length; row++)
-//     array[row] = star.repeat(row + 1);
-//   console.log(array);
-// }
-
-function showStars(rows) {
-  for (let row = 1; row <= rows; row++) {
-    let pattern = "";
-    for (let i = 0; i < row; i++) pattern += "*";
-    console.log(pattern);
-  }
+function showPrimes(limit) {
+  for (let number = 2; number <= limit; number++)
+    if (isPrime(number)) console.log(number);
 }
+
+function isPrime(number) {
+  for (let factor = 2; factor < number; factor++)
+    if (number % factor === 0) return false;
+  return true;
+}
+
+showPrimes(20);
