@@ -1,21 +1,12 @@
-// Factory Function
-function createCircle(radius) {
-  return {
-    radius,
-    draw() {
-      console.log("draw");
-    },
-  };
-}
+const circle = {
+  radius: 1,
+};
 
-const circle1 = createCircle(1);
+circle.color = "yellow";
+circle.draw = function () {};
 
-// Constraction Function
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
-    console.log("drow");
-  };
-}
+//Delete
+delete circle.color;
 
-const circle2 = new Circle(1);
+//circle ={} den mporeiw na kaneiw reasined einai const
+console.log(circle);
