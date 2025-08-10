@@ -1,12 +1,25 @@
-const circle = {
-  radius: 1,
-};
+// Factory Function
+function createCircle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log("draw");
+    },
+  };
+}
 
-circle.color = "yellow";
-circle.draw = function () {};
+const circle = createCircle(1);
 
-//Delete
-delete circle.color;
+// Constraction Function
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("drow");
+  };
+}
 
-//circle ={} den mporeiw na kaneiw reasined einai const
-console.log(circle);
+const another = new Circle(1);
+
+new String(); // '',""
+new Boolean(); //true ,false
+new Number(); //1,2,3
