@@ -1,28 +1,14 @@
-let x = 10;
-let y = x;
+const circle = {
+  radius: 1,
+  draw() {
+    console.log("draw");
+  },
+};
 
-x = 20;
+for (let key in circle) console.log(key, circle[key]);
 
-//Primitives are copied by their value
-//Objects are copied by their reference
+// for of einai gia Arrays
+for (let key of Object.keys(circle)) console.log(key);
+for (let entry of Object.entries(circle)) console.log(entry);
 
-let d = { value: 10 };
-let f = d;
-
-d.value = 30;
-
-let number = 10;
-
-function increase(number) {
-  number++;
-}
-increase(number);
-console.log(number);
-////
-let obj = { value: 10 };
-
-function increase(obj) {
-  obj.value++;
-}
-increase(obj);
-console.log(obj);
+if ("radius" in circle) console.log("Yes");
