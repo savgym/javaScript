@@ -3,13 +3,6 @@ const courses = [
   { id: 2, name: "b" },
 ];
 
-// const course = courses.find(function (course) {
-//   return course.name === "a";
-// });
-
-// pou einai sto array
-const course = courses.findIndex(function (course) {
-  return course.name === "a";
-});
+const course = courses.find((course) => course.name === "a");
 
 console.log(course);
