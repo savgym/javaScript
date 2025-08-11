@@ -1,4 +1,16 @@
-const now = new Date();
-const date1 = new Date("May 11 2025 09:00");
+// street
+// city
+// zipCode
+// showAddress(address)
 
-now.setFullYear(2017);
+const address = {
+  street: "dodekanisou",
+  city: "Athens",
+  zipCode: 14235,
+};
+
+function showAddress(address) {
+  for (let key in address) console.log(key, address[key]);
+}
+
+showAddress(address);
