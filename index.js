@@ -1,9 +1,28 @@
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
-    console.log("drow");
-  };
+let x = 10;
+let y = x;
+
+x = 20;
+
+//Primitives are copied by their value
+//Objects are copied by their reference
+
+let d = { value: 10 };
+let f = d;
+
+d.value = 30;
+
+let number = 10;
+
+function increase(number) {
+  number++;
 }
-Circle.call({}, 1);
-Circle.apply({}, [1]); // an exeis array
-const another = new Circle(1);
+increase(number);
+console.log(number);
+////
+let obj = { value: 10 };
+
+function increase(obj) {
+  obj.value++;
+}
+increase(obj);
+console.log(obj);
