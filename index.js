@@ -1,17 +1,8 @@
-const circle = {
-  radius: 1,
-  draw() {
-    console.log("draw");
-  },
-};
+const name = "Savas";
 
-// Clone old way
-// const another = {};
+const message = `Hi ${name} ${2 + 5},
 
-// for (let key in circle) another[key] = circle[key];
+Thank you for calling
 
-// const another = Object.assign({ color: "yellow" }, circle);
-// const another = Object.assign({}, circle);
-
-const another = { ...circle };
-console.log(another);
+Regards 
+Mosh`;
