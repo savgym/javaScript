@@ -1,8 +1,15 @@
-const courses = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-];
+const numbers = [1, 2, 3, 4];
 
-const course = courses.find((course) => course.name === "a");
-
-console.log(course);
+// End
+const last = numbers.pop();
+console.log(numbers);
+console.log(last);
+// Beginning
+const first = numbers.shift();
+console.log(numbers);
+console.log(first);
+// Middle
+const remove = numbers.splice(1, 1);
+console.log(numbers);
+// diko moy .bgazei array tsekare to
+console.log(remove);
