@@ -1,15 +1,18 @@
-const numbers = [1, 2, 3, 4];
+let numbers = [1, 2, 3, 4];
+let another = numbers;
 
-// End
-const last = numbers.pop();
+// Solution 1
+// den sveinei sto another sta alla solution sveinei pantou
+// numbers = [];
+
+// Solution 2
+// numbers.length = 0;
+
+// Solution 3
+// numbers.splice(0, numbers.length);
+
+// Solution 4
+while (numbers.length > 0) numbers.pop();
+
 console.log(numbers);
-console.log(last);
-// Beginning
-const first = numbers.shift();
-console.log(numbers);
-console.log(first);
-// Middle
-const remove = numbers.splice(1, 1);
-console.log(numbers);
-// diko moy .bgazei array tsekare to
-console.log(remove);
+console.log(another);
