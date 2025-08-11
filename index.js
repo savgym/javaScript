@@ -1,12 +1,10 @@
 let first = [1, 2, 3];
 let second = [4, 5, 6];
 
-const combined = first.concat(second);
-
-// const slice = combined.slice(2, 4);
-// const slice = combined.slice(2);
-// perno copy of original array
-const slice = combined.slice();
+// const combined = first.concat(second);
+const combined = [...first, "a", ...second, "b"];
 
 console.log(combined);
-console.log(slice);
+// Copy
+const slice = combined.slice();
+const copy = [...combined];
