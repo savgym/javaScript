@@ -5,10 +5,13 @@ const circle = {
   },
 };
 
-for (let key in circle) console.log(key, circle[key]);
+// Clone old way
+// const another = {};
 
-// for of einai gia Arrays
-for (let key of Object.keys(circle)) console.log(key);
-for (let entry of Object.entries(circle)) console.log(entry);
+// for (let key in circle) another[key] = circle[key];
 
-if ("radius" in circle) console.log("Yes");
+// const another = Object.assign({ color: "yellow" }, circle);
+// const another = Object.assign({}, circle);
+
+const another = { ...circle };
+console.log(another);
