@@ -9,8 +9,18 @@ const address = {
   zipCode: 14235,
 };
 
+// Factory Function
 function showAddress(address) {
-  for (let key in address) console.log(key, address[key]);
+  return {
+    street,
+    city,
+    zipCode,
+  };
 }
 
 showAddress(address);
+//Constaction Function
+
+function ShowAddress(address){
+  this.street=
+}
