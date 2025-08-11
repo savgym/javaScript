@@ -1,8 +1,4 @@
-const name = "Savas";
+const now = new Date();
+const date1 = new Date("May 11 2025 09:00");
 
-const message = `Hi ${name} ${2 + 5},
-
-Thank you for calling
-
-Regards 
-Mosh`;
+now.setFullYear(2017);
