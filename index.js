@@ -1,25 +1,11 @@
-// const numbers = [2, 3, 1];
-// numbers.sort();
-// console.log(numbers);
+const numbers = [1, -1, 2, 3];
 
-// numbers.reverse();
-// console.log(numbers);
+// every() check if everything match this cratirial
+// sone() check at least one
 
-const courses = [
-  { id: 1, name: "Node.js" },
-  { id: 2, name: "javaScript" },
-];
+const allPositive = numbers.every((value) => value >= 0);
 
-courses.sort(function (a, b) {
-  // a<b => -1
-  // a>b => 1
-  // a=b => 0
-  const nameA = a.name.toLowerCase();
-  const nameB = b.name.toLowerCase();
+const atLeastOnePositive = numbers.some((value) => value >= 0);
 
-  if (nameA < nameB) return -1;
-  if (nameA > nameB) return 1;
-  return 0;
-});
-
-console.log(courses);
+console.log(allPositive);
+console.log(atLeastOnePositive);
