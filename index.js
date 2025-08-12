@@ -1,10 +1,12 @@
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 1, 1, 1, 1, 2];
 
-// console.log(numbers.includes(1));
+const output = except(numbers, [1, 2]);
 
-function includes(array, searchElement) {
-  for (let key of array) if (key === searchElement) return true;
-  return false;
+console.log(output);
+
+function except(array, excluded) {
+  const output = [];
+  for (let element of array)
+    if (!excluded.includes(element)) output.push(element);
+  return output;
 }
-
-console.log(includes(numbers, 10));
