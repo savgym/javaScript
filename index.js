@@ -1,19 +1,21 @@
-const numbers = [1, 2, 3, 4, 1, 1];
+const numbers = [1, 2, 3, 4];
 
-const count = countOccurrences(numbers, 1);
+const max = getMax(numbers);
 
-console.log(count);
+console.log(max);
 
-// function countOccurrences(array, searchElement) {
-//   let times = 0;
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
 
-//   for (let n of array) if (n === searchElement) times++;
-//   return times;
+//   let max = array[0];
+
+//   for (let i = 1; i < array.length; i++) if (array[i] > max) max = array[i];
+
+//   return max;
 // }
 
-function countOccurrences(array, searchElement) {
-  return array.reduce((accumulator, currentValue) => {
-    const occurrance = currentValue === searchElement ? 1 : 0;
-    return accumulator + occurrance;
-  }, 0);
+function getMax(array) {
+  if (array.length === 0) return undefined;
+
+  return array.reduce((a, b) => (a > b ? a : b));
 }
