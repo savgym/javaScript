@@ -1,52 +1,8 @@
-// method -> obj
-// function -> global (window, global)
+// sum([1,2,3,4]) => 10
 
-// const video = {
-//   title: "a",
-//   tags: ["a", "b", "c"],
-//   showTags() {
-//     const self = this;
-//     this.tags.forEach(function (tag) {
-//       console.log(self.title, tag);
-//     });
-//   },
-// };
-
-// video.showTags();
-
-function playVideo(a, b) {
-  console.log(this);
+function sum(...items) {
+  if (items.length === 1 && Array.isArray(items[0])) items = [...items[0]];
+  return items.reduce((a, b) => a + b);
 }
 
-playVideo.call({ name: "Mosh" }, 1, 2);
-playVideo.apply({ name: "Mosh" }, [1, 2]);
-// const fn = playVideo.bind({ name: "Mosh" });
-// fn();
-playVideo.bind({ name: "Mosh" })();
-// window
-playVideo();
-
-// const video = {
-//   title: "a",
-//   tags: ["a", "b", "c"],
-//   showTags() {
-//     this.tags.forEach(
-//       function (tag) {
-//         console.log(this.title, tag);
-//       }.bind(this)
-//     );
-//   },
-// };
-
-// video.showTags();
-
-const video = {
-  title: "a",
-  tags: ["a", "b", "c"],
-  showTags() {
-    this.tags.forEach((tag) => {
-      console.log(this.title, tag);
-    });
-  },
-};
-video.showTags();
+console.log(sum([1, 2, 3, 4]));
